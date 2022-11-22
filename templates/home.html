@@ -11,18 +11,17 @@
     <h1>Starwars Database information</h1>
     <form action="/results" method="POST">
         <fieldset>
-            <legend>Enter a value under 100:</legend>
+            <legend>Enter a number between 1 and 88:</legend>
             <br>
             <label>
-                What Star Wards character would you like to look up?
-                <input type="number" name="character_index" min="1" max="100" value="1" required>
-
+                What Star Wars character would you like to look up?
+                <input type="number" name="character_index" min="1" max="88" value="1" required>
             </label>
             <br>
         </fieldset>
     </form>
 
-    <section id="form_results">
+    <section id="results">
         <br>
             Below is your character's information:
         <br>

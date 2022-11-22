@@ -29,6 +29,7 @@ def browse():
         homeworld = json.loads(character_info.content).get("homeworld")
         films = json.loads(character_info.content).get("films")
 
+        # Information being presented
         content = {
             "name" : name,
             "height" : height,
@@ -39,10 +40,10 @@ def browse():
             "films" : films
         }
 
-        return render_template('results.html', **content)
+        return render_template('home.html', **content)
 
     else:
-        return render_template('hoome.html', **content)
+        return render_template('home.html', **content)
 
 
 if __name__ == '__main__':
