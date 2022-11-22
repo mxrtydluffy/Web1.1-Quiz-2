@@ -7,14 +7,34 @@
     <title>Quiz 2</title>
 </head>
 <body>
+    {% block content %}
     <h1>Starwars Database information</h1>
-    <form action="" method="GET">
+    <form action="/results" method="POST">
         <fieldset>
-            <legend>Category</legend>
-            <select name="Category" id="cateogry information">
-                <option value=""></option>
-            </select>
+            <legend>Enter a value under 100:</legend>
+            <br>
+            <label>
+                What Star Wards character would you like to look up?
+                <input type="number" name="character_index" min="1" max="100" value="1" required>
+
+            </label>
+            <br>
         </fieldset>
     </form>
+
+    <section id="form_results">
+        <br>
+            Below is your character's information:
+        <br>
+
+        {% if True %}
+        <p> Name: {{name}}</p>
+        <p> Height: {{height}}cm</p>
+        <p> Mass: {{mass}}kg</p>
+        <p> Hair Color: {{hair_color}}</p>
+        <p> Eye Color: {{eye_color}}</p>
+        {% endif %}
+    </section>
+    {% endblock %}
 </body>
 </html>
